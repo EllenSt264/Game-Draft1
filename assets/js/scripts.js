@@ -35,4 +35,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     animate();
+
+    // Key Event Listeners 
+
+    window.addEventListener("keydown", function(e) {
+        keys[e.key] = true;     // when a key is pressed that key is added to the keys array
+    });
+
+    window.addEventListener("keyup", function(e) {
+        delete keys[e.key];     // when a key is released, that key is removed from the keys array
+    });
+
+    
 })
