@@ -66,6 +66,16 @@ document.addEventListener("DOMContentLoaded", function() {
             player.frameY = 3;
             player.moving = true;
         }
+        // Up-Right
+        if ( ((keys[38] && keys[39]) || (keys[87] && keys[68])) && player.y > 600 && player.x < canvas.width - player.width) {
+            player.frameY = 1;
+            player.moving = true;
+        }
+        // Down-Right
+        if ( ((keys[40] && keys[39]) || (keys[83] && keys[68])) && player.y < canvas.height - player.height && player.x < canvas.width - player.width) {
+            player.frameY = 4;
+            player.moving = true;
+        }
     }
 
     // To trigger sprite walking animation frames
