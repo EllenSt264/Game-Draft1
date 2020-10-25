@@ -46,21 +46,25 @@ document.addEventListener("DOMContentLoaded", function() {
         if ((keys[38] || keys[87]) && player.y > 600) {
             player.y -= player.speed;
             player.frameY = 0;
+            player.moving = true;
         }
         // Down
         if ((keys[40] || keys[83]) && player.y < canvas.height - player.height) {
             player.y += player.speed;
             player.frameY = 6;
+            player.moving = true;
         }
         // Right
         if ((keys[39] || keys[68]) && player.x < canvas.width - player.width) {
             player.x += player.speed;
             player.frameY = 3;
+            player.moving = true;
         }
         // Left
         if ((keys[37] || keys[65]) && player.x > 0) {
             player.x -= player.speed;
             player.frameY = 3;
+            player.moving = true;
         }
     }
 
