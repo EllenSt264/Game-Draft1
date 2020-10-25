@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const keys = [];
 
     const player = {
-        x: 0,               // player's horizontal position on the x axis
-        y: 0,               // player's vertical position on the y axis
+        x: 100,               // player's horizontal position on the x axis
+        y: 600,               // player's vertical position on the y axis
         width: 117.7857,          // width is calculated based on what spritesheet we use
         height: 113.125,         // height is calculated based on what spritesheet we use
         frameX: 0,          // the horizontal coordinate of frame we cut out from our sprite sheet
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);   // clear entire canvas between every animation frame
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-        drawSprite(playerSprite, 0, 0, player.width, player.height, 100, 600, player.width, player.height);
+        drawSprite(playerSprite, player.width * player.frameX, player.height * player.frameY, player.width, player.height, player.x, player.y, player.width, player.height);
         requestAnimationFrame(animate);
     }
 
