@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#canvas1 {
+    width: 2000px;
+    height: 1000px;
+    border: 2px solid #262521;
+    background-color: #79ad8b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
